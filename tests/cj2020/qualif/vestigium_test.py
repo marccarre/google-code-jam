@@ -1,5 +1,5 @@
 from pytest import main
-from cj2020.vestigium import trace_and_duplicates
+from cj2020.qualif.vestigium import trace_and_duplicates
 
 
 def test_trace_and_duplicates():

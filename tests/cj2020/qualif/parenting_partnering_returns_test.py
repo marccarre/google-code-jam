@@ -1,5 +1,5 @@
 from pytest import main
-from cj2020.parenting_partnering_returns import schedule
+from cj2020.qualif.parenting_partnering_returns import schedule
 
 
 def test_schedule():

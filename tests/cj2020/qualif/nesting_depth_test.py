@@ -1,5 +1,5 @@
 from pytest import main
-from cj2020.nesting_depth import nest
+from cj2020.qualif.nesting_depth import nest
 
 
 def test_nest():

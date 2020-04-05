@@ -1,5 +1,5 @@
 from pytest import main
-from cj2020.incidium import n_k_trace, next_empty_cell, possible_values
+from cj2020.qualif.incidium import n_k_trace, next_empty_cell, possible_values
 
 
 def test_n_k_trace():
