@@ -91,8 +91,7 @@ Note that in Case #1, you can take a picture with Peppurr one block to the south
 
 In Case #2, Peppurr travels in a small square. You can take a picture when Peppurr returns to the starting point of that square.
 '''
-from typing import List, Tuple
-from collections import deque
+from typing import Tuple
 
 
 def main() -> None:
@@ -115,18 +114,9 @@ def meet_peppurr(starting_point: Tuple[int, int], planned_path: str) -> int:
             peppurr.append((x + 1, y))
         elif step == 'W':
             peppurr.append((x - 1, y))
-    path = deque([((0, 0), 0)])
-    while path:
-        (x, y), t = path.popleft()
-        if (x, y) == peppurr[t]:
+    for t, (x, y) in enumerate(peppurr):
+        if abs(x) + abs(y) <= t:
             return t
-        if t < len(peppurr) - 1:
-            t += 1
-            path.append(((x, y), t))
-            path.append(((x, y - 1), t))
-            path.append(((x, y + 1), t))
-            path.append(((x - 1, y), t))
-            path.append(((x + 1, y), t))
     return 'IMPOSSIBLE'
 
 
